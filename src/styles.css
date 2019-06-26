@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 200px;
+}
+.item {
+  --negativeOffset: calc(100% - 50px);
+  padding: 3rem;
+  opacity: 0.8;
+  display: flex;
+}
+.item:first-child {
+  grid-column: 1 / span 4;
+  grid-row: 1 / span 2;
+  background-color: turquoise;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 var(--negativeOffset));
+}
